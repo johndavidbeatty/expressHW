@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Questionnaire</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="text-center">
+        <span class="fa fa-wpforms"></span> Interest Questionnaire</h1>
+      <hr>
+      <h2 class="text-center">Share your passions and interests</h2>
+      <br>
+
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+
+        <div class="panel panel-default">
+          <div class="panel-body"></div>
+          <div id="#newNerdFriend"></div>
+          <form role="form">
+
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" style="width:500px;" placeholder="Captain Kirk" id="name">
+            </div>
+
+            <div class="form-group">
+              <label for="picLink">Link to your profile pic or avatar:</label>
+              <input type="text" class="form-control" style="overflow: scroll;width:500px;" placeholder="http://www.your pic link here.jpg"
+                id="picLink">
+            </div>
+
+            <div class="panel-heading" style="margin-top:25px;margin-bottom:20px;">
+              <h4 class="panel-title">Questionnaire</h4>
+            </div>
+
+            <!-- question 1 -->
+            <div class="slidecontainer" style="width: 300px" ;>
+              <p class="text-left font-weight-bold">Star Wars</p>
+              <input type="range" min="1" max="50" value="25" class="slider" style="width: 300px;" id="q1">
+              <p class="text-right font-weight-bold">Star Trek</p>
+              <br>
+            </div>
+            <!-- question 2 -->
+            <div class="slidecontainer" style="width: 300px" ;>
+              <p class="text-left font-weight-bold">SciFy Movie</p>
+              <input type="range" min="1" max="50" value="25" class="slider" style="width: 300px;" id="q2">
+              <p class="text-right font-weight-bold">SciFy Book</p>
+              <br>
+            </div>
+            <!-- question 3 -->
+            <div class="slidecontainer" style="width: 300px" ;>
+              <p class="text-left font-weight-bold">Rick and Morty</p>
+              <input type="range" min="1" max="50" value="25" class="slider" style="width: 300px;" id="q3">
+              <p class="text-right font-weight-bold">Futurama</p>
+              <br>
+            </div>
+            <!-- question 4 -->
+            <div class="slidecontainer" style="width: 300px" ;>
+              <p class="text-left font-weight-bold">Prequels</p>
+              <input type="range" min="1" max="50" value="25" class="slider" style="width: 300px;" id="q4">
+              <p class="text-right font-weight-bold">Ep 4-6</p>
+              <br>
+            </div>
+            <!-- question 5 -->
+            <div class="slidecontainer" style="width: 300px" ;>
+              <p class="text-left font-weight-bold">Ender's Game</p>
+              <input type="range" min="1" max="50" value="25" class="slider" style="width: 300px;" id="q5">
+              <p class="text-right font-weight-bold">Cryptonomicon</p>
+              <br>
+            </div>
+            <!-- question 6 -->
+            <div class="slidecontainer" style="width: 300px" ;>
+              <p class="text-left font-weight-bold">JarJar</p>
+              <input type="range" min="1" max="50" value="25" class="slider" style="width: 300px;" id="q6">
+              <p class="text-right font-weight-bold">Death</p>
+              <br>
+            </div>
+            <!-- question 7 -->
+            <div class="slidecontainer" style="width: 300px" ;>
+              <p class="text-left font-weight-bold">Fifth Element</p>
+              <input type="range" min="1" max="50" value="25" class="slider" style="width: 300px;" id="q7">
+              <p class="text-right font-weight-bold">Blade Runner</p>
+              <br>
+            </div>
+            <!-- question 8 -->
+            <div class="slidecontainer" style="width: 300px" ;>
+              <p class="text-left font-weight-bold">Kirk</p>
+              <input type="range" min="1" max="50" value="25" class="slider" style="width: 300px;" id="q8">
+              <p class="text-right font-weight-bold">Picard</p>
+              <br>
+            </div>
+            <!-- question 9 -->
+            <div class="slidecontainer" style="width: 300px" ;>
+              <p class="text-left font-weight-bold">BSG</p>
+              <input type="range" min="1" max="50" value="25" class="slider" style="width: 300px;" id="q9">
+              <p class="text-right font-weight-bold">Expanse</p>
+              <br>
+            </div>
+            <!-- question 10 -->
+            <div class="slidecontainer" style="width: 300px" ;>
+              <p class="text-left font-weight-bold">Harry Potter</p>
+              <input type="range" min="1" max="50" value="25" class="slider" style="width: 300px;" id="q10">
+              <p class="text-right font-weight-bold">Red Rising</p>
+              <br>
+            </div>
+
+            <button type="submit" class="btn btn-info submit">Submit</button>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- modal for displaying best match -->
+
+  <div id="recModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">
+            <strong>Recomended Nerd:</strong>
+          </h2>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        </div>
+        <div class="modal-body">
+          <h3 id="recoName"></h3>
+          <img id="recoImg" src="" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Got It!</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+
+
+
+
+  <script type="text/javascript">
+
+    // build object on button click and submit, then put response into modal
+
+    $(".submit").on("click", function (event) {
+      event.preventDefault();
+      
+      // Simple validation to make sure they entered data in both fields 
+
+      if ($("#name").val().trim() && $("#picLink").val().trim()) {
+
+        // build object:
+
+        //  I used a slider with value of 50 for granularity and then converted to 5
+
+        var nerdProfile = {
+          name: $("#name").val().trim(),
+          picLink: $("#picLink").val().trim(),
+          answers: [$("#q1").val() / 10,
+          $("#q2").val() / 10,
+          $("#q3").val() / 10,
+          $("#q4").val() / 10,
+          $("#q5").val() / 10,
+          $("#q6").val() / 10,
+          $("#q7").val() / 10,
+          $("#q8").val() / 10,
+          $("#q9").val() / 10,
+          $("#q10").val() / 10]
+        };
+
+        console.log("submitted data:", nerdProfile);
+
+        //  submit new object
+
+        $.post("/api/nerds", nerdProfile,
+          function (response) {
+
+            $("#recoName").text(response.name);
+            $("#recoImg").attr("src", response.picLink);
+
+            // Show the modal with the best match
+            $("#recModal").modal("toggle");
+
+
+          });
+
+      } else {
+        alert("please enter a valid name and picture link")
+      }
+
+
+    });
+
+
+
+
+  </script>
+
+</body>
+
+</html>
